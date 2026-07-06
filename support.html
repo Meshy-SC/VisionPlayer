@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <title>Support — VisionPlayer</title>
+  <meta name="description" content="Get help with VisionPlayer for Apple Vision Pro." />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="./">
+        <img src="assets/logo.png" alt="" />
+        VisionPlayer
+      </a>
+      <div class="nav-links">
+        <a href="./">Home</a>
+        <a href="support.html" class="active">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Support</h1>
+    <p class="subtitle">We're here to help you get the most out of VisionPlayer.</p>
+
+    <div class="callout" style="margin-top: 32px;">
+      <strong class="callout-title">Contact us</strong>
+      <p>
+        The fastest way to reach us is by email:
+        <a href="mailto:davinci.dalhi@gmail.com?subject=VisionPlayer%20Support">davinci.dalhi@gmail.com</a>.
+      </p>
+      <p>
+        For bug reports and feature requests, you can also
+        <a href="https://github.com/M3SHY/VisionPlayer/issues" target="_blank" rel="noopener">open an issue on GitHub</a>.
+      </p>
+    </div>
+
+    <h2>When you report a problem</h2>
+    <p>To help us fix things quickly, please include:</p>
+    <ul>
+      <li>Your visionOS version (Settings → General → About)</li>
+      <li>The VisionPlayer version (About screen inside the app)</li>
+      <li>A clear description of what you were doing and what happened</li>
+      <li>The video format if the issue relates to playback (e.g. MKV / HEVC / MV‑HEVC / AV1)</li>
+      <li>If possible, a link to a small sample file that reproduces the problem</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+
+    <div class="faq">
+      <details>
+        <summary>What devices does VisionPlayer support?</summary>
+        <p>VisionPlayer is a native visionOS app that runs on Apple Vision Pro with visionOS 26 or later.</p>
+      </details>
+
+      <details>
+        <summary>Which video formats can I play?</summary>
+        <p>
+          VisionPlayer uses a hybrid two‑engine pipeline. Apple‑native formats (H.264, HEVC, MV‑HEVC
+          Spatial Video, Apple Immersive Video, HLS) play through AVFoundation with full hardware
+          acceleration. When AVFoundation can't decode a file, the app transparently falls back to a
+          bundled FFmpeg engine that handles MKV, WebM, AVI, AV1, VP9, VC1, DTS audio, and more.
+        </p>
+        <p>Supported projections include rectilinear, equirectangular (180° &amp; 360°), fisheye,
+          cubemap, Apple Immersive, and Parametric Immersive. Frame packings include mono,
+          side‑by‑side, and over‑under.</p>
+      </details>
+
+      <details>
+        <summary>How do I open a file that's on my computer or NAS?</summary>
+        <p>
+          You can play files from several sources: your Photos library, local files via the Files app,
+          an HLS streaming URL, or by dragging a video onto a window. VisionPlayer also discovers
+          nearby VisionPlayer Link servers on your local network using Bonjour.
+        </p>
+      </details>
+
+      <details>
+        <summary>My 3D video doesn't look right — how do I fix it?</summary>
+        <p>
+          VisionPlayer auto‑detects most immersive formats from filename hints (e.g. <code>_360_sbs</code>,
+          <code>_180_3dh</code>, <code>_fisheye</code>) and from embedded metadata. If detection is
+          wrong, open the player settings and manually pick the correct projection and frame packing
+          (mono, side‑by‑side, or over‑under). Your choice is remembered per‑video.
+        </p>
+      </details>
+
+      <details>
+        <summary>The app says a file's format isn't supported. What can I do?</summary>
+        <p>
+          A "format not supported" error means neither AVFoundation nor the bundled FFmpeg engine
+          could decode the file. This is rare, but usually indicates a corrupted container or an
+          exotic codec. Try re‑exporting the file to H.264, HEVC, or AV1 in an MP4 or MKV container.
+          If you believe the file should play, please send us a sample so we can investigate.
+        </p>
+      </details>
+
+      <details>
+        <summary>Do subtitles work?</summary>
+        <p>
+          Yes — VisionPlayer supports SRT sidecar files, WebVTT tracks in HLS streams, and embedded
+          closed captions. You can also load an external subtitle file from the picker. Embedded
+          ASS/SSA, PGS and VOBSUB subtitle tracks are currently detected but not yet rendered — this
+          is on our roadmap.
+        </p>
+      </details>
+
+      <details>
+        <summary>How do I exit an immersive scene?</summary>
+        <p>
+          Press and hold the Digital Crown on Apple Vision Pro to exit any immersive space. You can
+          also tap the exit control in the head‑anchored playback panel.
+        </p>
+      </details>
+
+      <details>
+        <summary>Does VisionPlayer sync across my Apple devices?</summary>
+        <p>
+          If you're signed in to iCloud, VisionPlayer syncs your favorites, playback history, resume
+          positions, and per‑video settings across your devices via iCloud Key‑Value Storage. Nothing
+          is uploaded to our servers because we don't run any. See our
+          <a href="privacy.html">Privacy Policy</a> for details.
+        </p>
+      </details>
+
+      <details>
+        <summary>Does VisionPlayer collect any personal data?</summary>
+        <p>
+          No. VisionPlayer does not collect any personal data, does not use analytics, does not show
+          ads, and does not track you. All your playback state lives on your device (and in your own
+          private iCloud store if you have iCloud enabled). See our
+          <a href="privacy.html">Privacy Policy</a> for the full details.
+        </p>
+      </details>
+
+      <details>
+        <summary>How is VisionPlayer licensed?</summary>
+        <p>
+          VisionPlayer is open source. The source code is available on
+          <a href="https://github.com/M3SHY/VisionPlayer" target="_blank" rel="noopener">GitHub</a>.
+        </p>
+      </details>
+    </div>
+
+    <h2>Still need help?</h2>
+    <p>Send us an email and we'll get back to you.</p>
+    <p>
+      <a class="button" href="mailto:davinci.dalhi@gmail.com?subject=VisionPlayer%20Support">Email support</a>
+      <a class="button button-secondary" href="https://github.com/M3SHY/VisionPlayer/issues" target="_blank" rel="noopener" style="margin-left: 8px;">Open a GitHub issue</a>
+    </p>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">VisionPlayer</div>
+    <div>
+      <a href="./">Home</a>·
+      <a href="support.html">Support</a>·
+      <a href="privacy.html">Privacy</a>·
+      <a href="https://github.com/M3SHY/VisionPlayer" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div style="margin-top: 12px;">© 2026 VisionPlayer</div>
+  </footer>
+
+</body>
+</html>

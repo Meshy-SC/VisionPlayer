@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <title>Privacy Policy — VisionPlayer</title>
+  <meta name="description" content="VisionPlayer privacy policy — we don't collect your personal data." />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="./">
+        <img src="assets/logo.png" alt="" />
+        VisionPlayer
+      </a>
+      <div class="nav-links">
+        <a href="./">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html" class="active">Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective date: July 6, 2026 · Last updated: July 6, 2026</p>
+
+    <div class="callout">
+      <strong class="callout-title">The short version</strong>
+      <p>
+        VisionPlayer does not collect, store, share, or sell any personal data. It has no user
+        accounts, no analytics, no advertising, and no third‑party tracking. Everything you do in the
+        app stays on your device (and, optionally, in your own private iCloud). This page explains
+        the details.
+      </p>
+    </div>
+
+    <div class="toc">
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="#scope">Who this policy applies to</a></li>
+        <li><a href="#no-collection">Data we do not collect</a></li>
+        <li><a href="#on-device">Information stored on your device</a></li>
+        <li><a href="#icloud">Optional iCloud sync</a></li>
+        <li><a href="#network">Network activity</a></li>
+        <li><a href="#permissions">Permissions the app may request</a></li>
+        <li><a href="#third-parties">Third‑party services</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </div>
+
+    <h2 id="scope">1. Who this policy applies to</h2>
+    <p>
+      This Privacy Policy describes how VisionPlayer (the "app", "we", "us", or "our"), a native
+      visionOS application for Apple Vision Pro, handles information. It applies to the VisionPlayer
+      app distributed on the Apple App Store and its accompanying widget.
+    </p>
+
+    <h2 id="no-collection">2. Data we do not collect</h2>
+    <p>We want to be explicit: VisionPlayer does <strong>not</strong> collect any of the following:</p>
+    <ul>
+      <li>Names, email addresses, phone numbers, or any account information</li>
+      <li>Device identifiers, advertising identifiers (IDFA), or tracking identifiers</li>
+      <li>Location data (precise or coarse)</li>
+      <li>Usage analytics, crash reports, or telemetry sent to us or any third party</li>
+      <li>Contacts, calendars, health data, or any other Apple‑managed personal data</li>
+      <li>The contents, filenames, or metadata of videos you play</li>
+    </ul>
+    <p>
+      We do not maintain servers that receive data from the app. There is no login. There is no
+      account to create. There is nothing to opt out of, because there is nothing being collected in
+      the first place.
+    </p>
+
+    <h2 id="on-device">3. Information stored on your device</h2>
+    <p>
+      VisionPlayer stores app state locally on your device using Apple's standard on‑device storage
+      (<code>UserDefaults</code>). This information never leaves your device except through the
+      optional iCloud sync described below. It includes:
+    </p>
+    <ul>
+      <li>Your app preferences and settings</li>
+      <li>Recently opened items and favorites</li>
+      <li>Resume‑playback positions per video</li>
+      <li>Per‑video configuration overrides (projection, frame packing, playback speed, subtitle style)</li>
+      <li>Security‑scoped bookmarks that let the app reopen files and folders you have explicitly granted access to</li>
+      <li>Cached video thumbnails and, if you use the metadata lookup feature, cached poster images</li>
+    </ul>
+    <p>
+      You can clear this information at any time by deleting the app from your device.
+    </p>
+
+    <h2 id="icloud">4. Optional iCloud sync</h2>
+    <p>
+      If you are signed in to iCloud on your Apple device, VisionPlayer uses Apple's iCloud
+      Key‑Value Storage (<code>NSUbiquitousKeyValueStore</code>) to sync a small amount of app state
+      across your own Apple devices, so that (for example) you can start a video on one device and
+      resume on another. The synced items are:
+    </p>
+    <ul>
+      <li>Favorites list</li>
+      <li>Playback history (capped at the 50 most recent items)</li>
+      <li>Resume positions per video</li>
+      <li>Per‑video configuration overrides</li>
+    </ul>
+    <p>
+      This data is stored in <strong>your</strong> private iCloud container, managed entirely by
+      Apple, and is not accessible to us. It is subject to
+      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.
+      To disable this feature, turn off iCloud for VisionPlayer in the system Settings app, or sign
+      out of iCloud.
+    </p>
+
+    <h2 id="network">5. Network activity</h2>
+    <p>VisionPlayer makes network requests only in the following situations, all initiated by you:</p>
+    <ul>
+      <li>
+        <strong>Playing a streaming URL you provide.</strong> When you open an HLS or HTTP video URL,
+        the app connects directly to the server you specified in order to stream the video. We do not
+        route or observe this traffic.
+      </li>
+      <li>
+        <strong>Discovering VisionPlayer Link servers on your local network.</strong> If you use the
+        Link feature, the app uses Bonjour (mDNS) to discover VisionPlayer Link servers on your local
+        network. This traffic never leaves your local network.
+      </li>
+      <li>
+        <strong>Optional metadata lookup.</strong> If you use the movie‑metadata lookup feature to
+        identify a video from its title, the app queries
+        <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">The Movie Database (TMDB)</a>
+        with the title you provide. The request sent to TMDB contains only the search text or an ID;
+        it does not include any information that identifies you. TMDB's use of the request is
+        governed by their
+        <a href="https://www.themoviedb.org/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+        and
+        <a href="https://www.themoviedb.org/terms-of-use" target="_blank" rel="noopener">Terms of Use</a>.
+      </li>
+    </ul>
+
+    <h2 id="permissions">6. Permissions the app may request</h2>
+    <p>
+      To provide its features, VisionPlayer may ask you for the following system permissions. Each
+      one is optional; the app will continue to function without it, though the related feature will
+      be unavailable.
+    </p>
+    <ul>
+      <li>
+        <strong>Local network.</strong> Required to discover VisionPlayer Link servers on your Wi‑Fi
+        network via Bonjour.
+      </li>
+      <li>
+        <strong>Photos (add only).</strong> Required to save video screenshots to your Photos
+        library. The app does not read your photo library.
+      </li>
+      <li>
+        <strong>Files &amp; folders.</strong> When you pick a video or folder through the system
+        document picker, macOS/visionOS grants the app scoped access to that location. The app stores
+        a bookmark so it can reopen the same file later; it does not access anything you have not
+        explicitly picked.
+      </li>
+      <li>
+        <strong>World sensing.</strong> Used to position playback controls relative to your head in
+        immersive scenes. No spatial data is stored or transmitted.
+      </li>
+    </ul>
+
+    <h2 id="third-parties">7. Third‑party services</h2>
+    <p>
+      VisionPlayer does not integrate any third‑party analytics, advertising, crash‑reporting, or
+      tracking SDK. The only external service the app may contact is TMDB, and only when you use the
+      optional metadata lookup feature (see <a href="#network">§5</a>). If you play a video from a
+      third‑party URL that you provide (for example, an HLS stream), that server is a third party
+      whose privacy practices are outside our control.
+    </p>
+
+    <h2 id="children">8. Children</h2>
+    <p>
+      VisionPlayer is a general‑audience video player and does not knowingly collect any information
+      from anyone, including children. Because we collect no personal data, we do not need to make
+      any special accommodations under laws such as COPPA or GDPR‑K.
+    </p>
+
+    <h2 id="rights">9. Your rights</h2>
+    <p>
+      Because VisionPlayer does not collect or store any personal data on servers we operate, there
+      is no data for us to access, correct, export, or delete on your behalf. You can:
+    </p>
+    <ul>
+      <li>Delete all local app data by removing the app from your device.</li>
+      <li>Remove iCloud‑synced data by disabling iCloud for VisionPlayer in Settings, or by signing out of iCloud.</li>
+      <li>Revoke any granted permission at any time in the Settings app.</li>
+    </ul>
+
+    <h2 id="changes">10. Changes to this policy</h2>
+    <p>
+      If we make material changes to this policy, we will update it here and change the "Last
+      updated" date at the top of the page. Because the app does not have a way to contact you
+      directly, we recommend checking this page after major updates.
+    </p>
+
+    <h2 id="contact">11. Contact us</h2>
+    <p>Questions or concerns about this Privacy Policy? Please reach out:</p>
+    <ul>
+      <li>Email: <a href="mailto:davinci.dalhi@gmail.com?subject=VisionPlayer%20Privacy">davinci.dalhi@gmail.com</a></li>
+      <li>Issue tracker: <a href="https://github.com/M3SHY/VisionPlayer/issues" target="_blank" rel="noopener">github.com/M3SHY/VisionPlayer/issues</a></li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">VisionPlayer</div>
+    <div>
+      <a href="./">Home</a>·
+      <a href="support.html">Support</a>·
+      <a href="privacy.html">Privacy</a>·
+      <a href="https://github.com/M3SHY/VisionPlayer" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div style="margin-top: 12px;">© 2026 VisionPlayer</div>
+  </footer>
+
+</body>
+</html>
