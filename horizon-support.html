@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <title>Support — VisionPlayer (Meta Horizon)</title>
+  <meta name="description" content="Get help with VisionPlayer for Meta Quest headsets." />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="./">
+        <img src="assets/logo.png" alt="" />
+        VisionPlayer
+      </a>
+      <div class="nav-links">
+        <a href="./">Home</a>
+        <a href="horizon-support.html" class="active">Support</a>
+        <a href="horizon-privacy.html">Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Meta Quest Support</h1>
+    <p class="subtitle">We're here to help you get the most out of VisionPlayer on Meta Quest.</p>
+
+    <div class="callout" style="margin-top: 32px;">
+      <strong class="callout-title">Contact Us</strong>
+      <p>
+        The fastest way to reach us is by email:
+        <a href="mailto:davinci.dalhi@gmail.com?subject=VisionPlayer%20Meta%20Quest%20Support">davinci.dalhi@gmail.com</a>.
+      </p>
+      <p>
+        For bug reports, feature requests, or sample file submissions, you can also
+        <a href="https://github.com/Meshy-SC/VisionPlayer/issues" target="_blank" rel="noopener">open an issue on GitHub</a>.
+      </p>
+    </div>
+
+    <h2>When Reporting an Issue</h2>
+    <p>To help us resolve issues quickly, please include:</p>
+    <ul>
+      <li>Your Meta Quest model (Quest 2, Quest Pro, Quest 3, or Quest 3S)</li>
+      <li>Horizon OS software version (Settings &rarr; System &rarr; Software Update)</li>
+      <li>VisionPlayer app version (e.g. 26.0.1)</li>
+      <li>A description of what you were doing and what occurred</li>
+      <li>The video container &amp; codec if reporting a playback issue (e.g., MKV / HEVC / AV1 / VR180)</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <details>
+        <summary>What devices are supported?</summary>
+        <p>VisionPlayer runs natively on Meta Quest 2, Meta Quest Pro, Meta Quest 3, and Meta Quest 3S on Horizon OS.</p>
+      </details>
+
+      <details>
+        <summary>Which video formats can VisionPlayer play?</summary>
+        <p>
+          VisionPlayer uses a high-performance dual-engine pipeline. Standard formats (MP4, MOV, H.264, HEVC, HLS) play via
+          hardware-accelerated media decoders. Other containers and formats (MKV, WebM, AVI, WMV, AV1, VP9, MPEG-2, AAC, AC-3, FLAC, Opus)
+          are processed transparently.
+        </p>
+        <p>
+          Supported projections include flat 2D, VR180, VR360, fisheye (180°/190°/200°), side-by-side (SBS) 3D, and over-under (OU) 3D.
+        </p>
+      </details>
+
+      <details>
+        <summary>How do I stream videos from my Mac, PC, or NAS?</summary>
+        <p>
+          VisionPlayer includes a built-in SMB network browser. Simply enable Windows File Sharing (SMB) on your PC/Mac or NAS on your local Wi-Fi.
+          In VisionPlayer, navigate to the Network tab, tap your server name, and enter your share credentials. You can stream videos without copying files onto the headset.
+        </p>
+      </details>
+
+      <details>
+        <summary>Can I use hand tracking without Touch controllers?</summary>
+        <p>
+          Yes! VisionPlayer supports Meta Quest Hand Tracking 2.0. You can browse the library, select videos, pause, seek, and adjust settings using natural hand pinch and pointer gestures.
+        </p>
+      </details>
+
+      <details>
+        <summary>My 3D video layout looks incorrect — how do I fix it?</summary>
+        <p>
+          VisionPlayer auto-detects most 3D and VR projections from filename tags (e.g., <code>_180_sbs</code>, <code>_360_ou</code>, <code>_fisheye</code>).
+          If a file is auto-detected incorrectly, open the playback settings panel and manually set the projection (2D / VR180 / VR360) and 3D mode (SBS / Over-Under).
+          Your selection is remembered per video.
+        </p>
+      </details>
+
+      <details>
+        <summary>Do subtitles work?</summary>
+        <p>
+          Yes. VisionPlayer supports external SRT sidecar files, WebVTT, and embedded subtitles. You can pick external subtitle files directly from local storage.
+        </p>
+      </details>
+
+      <details>
+        <summary>Does VisionPlayer collect any personal data?</summary>
+        <p>
+          No. VisionPlayer collects zero personal data, contains no advertising SDKs, and performs no tracking.
+          All settings and stored SMB credentials remain encrypted on your headset. See our <a href="horizon-privacy.html">Privacy Policy</a> for full details.
+        </p>
+      </details>
+    </div>
+
+    <h2>Need Direct Help?</h2>
+    <p>Feel free to reach out to us directly:</p>
+    <p>
+      <a class="button" href="mailto:davinci.dalhi@gmail.com?subject=VisionPlayer%20Support">Email Support</a>
+      <a class="button button-secondary" href="https://github.com/Meshy-SC/VisionPlayer/issues" target="_blank" rel="noopener" style="margin-left: 8px;">GitHub Issues</a>
+    </p>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">VisionPlayer for Meta Horizon OS</div>
+    <div>
+      <a href="./">Home</a>·
+      <a href="horizon-support.html">Support</a>·
+      <a href="horizon-privacy.html">Privacy</a>·
+      <a href="https://github.com/Meshy-SC/VisionPlayer" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div style="margin-top: 12px;">© 2026 VisionPlayer</div>
+  </footer>
+
+</body>
+</html>
