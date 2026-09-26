@@ -1,169 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#000000" />
-  <title>Privacy Policy — VisionPlayer (Meta Horizon)</title>
-  <meta name="description" content="VisionPlayer for Meta Horizon OS privacy policy — transparent, zero-tracking data practices." />
-  <link rel="icon" type="image/png" href="assets/logo.png" />
-  <link rel="apple-touch-icon" href="assets/logo.png" />
-  <link rel="stylesheet" href="assets/style.css" />
-</head>
-<body>
+# Vision Player Pro Privacy Policy — Meta Horizon OS
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <a class="nav-brand" href="./">
-        <img src="assets/logo.png" alt="" />
-        VisionPlayer
-      </a>
-      <div class="nav-links">
-        <a href="./">Home</a>
-        <a href="horizon-support.html">Support</a>
-        <a href="horizon-privacy.html" class="active">Privacy</a>
-      </div>
-    </div>
-  </nav>
+**Effective Date:** July 25, 2026
+**Last Updated:** September 26, 2026
 
-  <main class="container">
-    <h1>Privacy Policy — Meta Horizon Store</h1>
-    <p class="meta">Effective date: July 25, 2026 · Last updated: July 25, 2026</p>
+---
 
-    <div class="callout">
-      <strong class="callout-title">The Short Version (VRC.Privacy Compliant)</strong>
-      <p>
-        VisionPlayer for Meta Horizon OS does not collect, store, sell, or transmit any of your personal data.
-        The application operates entirely on your Meta Quest headset. There are no user accounts, no telemetry,
-        no advertising SDKs, and no tracking. All playback preferences, history, and SMB credentials remain encrypted on your device.
-      </p>
-    </div>
+## 1. Overview & Scope
 
-    <div class="toc">
-      <p class="toc-title">Contents</p>
-      <ol>
-        <li><a href="#scope">1. Scope & Application</a></li>
-        <li><a href="#no-collection">2. Data We Do Not Collect (VRC.Privacy.2)</a></li>
-        <li><a href="#on-device">3. Information Stored on Your Device</a></li>
-        <li><a href="#network">4. Network Activity & SMB Streaming</a></li>
-        <li><a href="#permissions">5. System Permissions (VRC.Privacy.4)</a></li>
-        <li><a href="#third-parties">6. Third-Party Services & Ads</a></li>
-        <li><a href="#deletion">7. User Control & Data Deletion (VRC.Privacy.3)</a></li>
-        <li><a href="#children">8. Children's Privacy</a></li>
-        <li><a href="#changes">9. Policy Updates</a></li>
-        <li><a href="#contact">10. Contact & Support</a></li>
-      </ol>
-    </div>
+This Privacy Policy describes how **Vision Player Pro** ("the app", "we", "us") handles information on Meta Quest headsets running Meta Horizon OS (Quest 2, Quest Pro, Quest 3, and Quest 3S). It addresses Meta's Virtual Reality Checks for privacy (**VRC.Privacy.1 through VRC.Privacy.4**).
 
-    <h2 id="scope">1. Scope & Application</h2>
-    <p>
-      This Privacy Policy applies to <strong>VisionPlayer</strong> for Meta Horizon OS distributed through the
-      Meta Horizon Store for Meta Quest headsets (Quest 2, Quest Pro, Quest 3, and Quest 3S). It addresses Meta's
-      Virtual Reality Checks for privacy (VRC.Privacy.1 through VRC.Privacy.4).
-    </p>
+---
 
-    <h2 id="no-collection">2. Data We Do Not Collect (VRC.Privacy.2)</h2>
-    <p>We believe your personal media browsing should remain completely private. VisionPlayer does <strong>not</strong> collect:</p>
-    <ul>
-      <li>Personal identifiers (name, email address, phone number, Meta user ID)</li>
-      <li>Device serial numbers or hardware advertising identifiers</li>
-      <li>Location data (neither precise GPS nor coarse IP-based location)</li>
-      <li>App usage analytics, performance telemetry, or crash logs sent to remote servers</li>
-      <li>The filenames, video content, folder paths, or playback habits from your library</li>
-      <li>Biometric sensor data (hand tracking coordinates or spatial mesh data)</li>
-    </ul>
+## 2. Data We Do Not Collect (VRC.Privacy.2)
 
-    <h2 id="on-device">3. Information Stored on Your Device</h2>
-    <p>
-      To provide seamless video playback and remember your preferences, VisionPlayer stores minimal app state locally
-      on your Meta Quest headset using standard Android storage mechanisms (<code>SharedPreferences</code> and internal database).
-      This data includes:
-    </p>
-    <ul>
-      <li>Playback resume positions per video file</li>
-      <li>Favorites list and recent playback history</li>
-      <li>Per-video format overrides (projection type, 3D mode, aspect ratio, audio track selection)</li>
-      <li>Saved SMB network share bookmarks</li>
-      <li>Encrypted SMB login credentials (stored using Android <code>EncryptedSharedPreferences</code> with hardware keystore protection)</li>
-    </ul>
+Vision Player Pro is designed to keep your media browsing completely private. We do **not** collect, store, sell, or transmit any of the following:
 
-    <h2 id="network">4. Network Activity &amp; SMB Streaming</h2>
-    <p>VisionPlayer initiates local network and internet connections only in response to your explicit actions:</p>
-    <ul>
-      <li>
-        <strong>SMB Local Network Streaming:</strong> When you connect to a PC, Mac, or NAS on your Wi-Fi network,
-        VisionPlayer connects directly to your local file server over port 445 (SMB) to stream video. This communication
-        occurs strictly inside your local area network and is never routed to external servers.
-      </li>
-      <li>
-        <strong>Direct HTTP/HLS Streams:</strong> If you enter a custom video stream URL, the app connects directly
-        to that URL to fetch media data.
-      </li>
-    </ul>
+- Personal identifiers (name, email, phone number, Meta User ID)
+- Hardware serial numbers or advertising identifiers
+- Precise or coarse location data
+- App usage analytics, telemetry, or crash reports sent to external servers
+- Video filenames, media content, or folder paths from your personal library
+- Biometric data (hand tracking joint positions or camera imagery)
 
-    <h2 id="permissions">5. System Permissions (VRC.Privacy.4)</h2>
-    <p>VisionPlayer requests only the system permissions necessary for core video playback functionality:</p>
-    <ul>
-      <li>
-        <strong>Internet &amp; Network Access (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>):</strong>
-        Required for streaming video over your local network (SMB) or loading user-provided web URLs.
-      </li>
-      <li>
-        <strong>Hand Tracking (<code>HAND_TRACKING</code>):</strong>
-        Allows you to interact with Horizon OS panels, buttons, and transport controls using natural hand gestures.
-        Hand tracking input is processed entirely by Horizon OS; VisionPlayer does not record or store hand images or skeletal data.
-      </li>
-      <li>
-        <strong>Audio Settings (<code>MODIFY_AUDIO_SETTINGS</code>):</strong>
-        Allows the player's transport controls to adjust volume during playback.
-      </li>
-    </ul>
+---
 
-    <h2 id="third-parties">6. Third-Party Services &amp; Ads</h2>
-    <p>
-      VisionPlayer contains <strong>no third-party advertising, no tracking SDKs, and no analytics frameworks</strong>.
-      We do not share, sell, or license any user information to third parties.
-    </p>
+## 3. Information Stored Locally on Your Device
 
-    <h2 id="deletion">7. User Control &amp; Data Deletion (VRC.Privacy.3)</h2>
-    <p>
-      Because all data created by VisionPlayer resides locally on your Meta Quest headset:
-    </p>
-    <ul>
-      <li>You can clear all app preferences, history, and stored SMB credentials at any time by going to <strong>Settings &gt; Storage &gt; VisionPlayer &gt; Clear Data</strong> on your Meta Quest.</li>
-      <li>Uninstalling VisionPlayer permanently removes all stored app preferences and credentials from your headset.</li>
-      <li>Because no data is stored on remote servers, there is no remote data retention or need for external data deletion requests.</li>
-    </ul>
+To provide playback features, Vision Player Pro stores app state locally on your Meta Quest headset:
 
-    <h2 id="children">8. Children's Privacy</h2>
-    <p>
-      VisionPlayer is a general-audience video player. It does not collect any personal information from any user,
-      including children under 13.
-    </p>
+- Playback resume positions
+- Playback history and favorites
+- Per-video format configurations (projection, 3D mode, audio track selections)
+- Network server bookmarks
+- **Encrypted SMB credentials** (stored using Android `EncryptedSharedPreferences` with hardware keystore protection)
 
-    <h2 id="changes">9. Policy Updates</h2>
-    <p>
-      If this Privacy Policy is updated, the revised version will be published on this page with an updated "Last updated" date.
-    </p>
+All of this data remains on your headset and is never transmitted to external servers. The only information that leaves your headset is described in section 5.
 
-    <h2 id="contact">10. Contact &amp; Support</h2>
-    <p>If you have any questions about this Privacy Policy or VisionPlayer data practices, please contact us:</p>
-    <ul>
-      <li>Email: <a href="mailto:davinci.dalhi@gmail.com?subject=VisionPlayer%20Meta%20Horizon%20Privacy">davinci.dalhi@gmail.com</a></li>
-      <li>GitHub Repository: <a href="https://github.com/Meshy-SC/VisionPlayer" target="_blank" rel="noopener">github.com/Meshy-SC/VisionPlayer</a></li>
-    </ul>
-  </main>
+---
 
-  <footer class="footer">
-    <div class="footer-brand">VisionPlayer for Meta Horizon OS</div>
-    <div>
-      <a href="./">Home</a>·
-      <a href="horizon-support.html">Support</a>·
-      <a href="horizon-privacy.html">Privacy</a>·
-      <a href="https://github.com/Meshy-SC/VisionPlayer" target="_blank" rel="noopener">GitHub</a>
-    </div>
-    <div style="margin-top: 12px;">© 2026 VisionPlayer</div>
-  </footer>
+## 4. Network Activity
 
-</body>
-</html>
+Network communication occurs strictly when initiated by you:
+
+- **Local Network SMB Streaming:** Connects directly over port 445 (SMB) to stream media from your PC, Mac, or NAS on your local Wi-Fi. Traffic is restricted to your local network.
+- **Direct HTTP/HLS Streaming:** Connects directly to user-entered video stream URLs.
+
+---
+
+## 5. Meta Platform Services
+
+Vision Player Pro uses two services built into Meta Horizon OS. Both are provided by Meta, under your Meta account and [Meta&#39;s Privacy Policy](https://www.meta.com/legal/privacy-policy/):
+
+- **Entitlement check:** when the app starts, it asks Horizon OS whether your Meta account owns the app.
+- **Achievements:** the first time you play a video on a given day, the app adds one to a "days watched" achievement on your Meta account. Reaching a milestone unlocks an achievement that appears on your Meta profile, and it is also what ends the Meta Horizon Store free trial. Only the count of days is recorded. What you watched, when, and for how long is never sent.
+
+We do not retrieve or store this information ourselves.
+
+---
+
+## 6. System Permissions (VRC.Privacy.4)
+
+Vision Player Pro requests only essential permissions:
+
+- **Internet & Network Access (`INTERNET`, `ACCESS_NETWORK_STATE`):** Required for local SMB network streaming and user-specified web streams.
+- **Hand Tracking (`HAND_TRACKING`):** Enables hands-free interaction with Horizon OS UI panels and transport controls. Hand tracking is processed by Horizon OS; Vision Player Pro does not capture or store camera images or biometric data.
+- **Audio Settings (`MODIFY_AUDIO_SETTINGS`):** Allows volume adjustment via the in-app transport controls.
+
+---
+
+## 7. Third-Party Services & Ads
+
+Vision Player Pro contains **no third-party advertising SDKs, no tracking frameworks, and no analytics code**.
+
+---
+
+## 8. User Control & Data Deletion (VRC.Privacy.3)
+
+Because all app data is stored locally on your device:
+
+- You can clear all app preferences and credentials at any time in **Settings > Storage > Vision Player Pro > Clear Data** on your Meta Quest.
+- Uninstalling Vision Player Pro permanently deletes all local data from your headset.
+- No external server data deletion requests are needed. Achievement progress (section 5) belongs to your Meta account and is managed by Meta.
+
+---
+
+## 9. Contact Information
+
+If you have questions regarding this Privacy Policy:
+
+- **Email:** davinci.dalhi@gmail.com
+- **GitHub Repository:** [github.com/Meshy-SC/VisionPlayer](https://github.com/Meshy-SC/VisionPlayer)
