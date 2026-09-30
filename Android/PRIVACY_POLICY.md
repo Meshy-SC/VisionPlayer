@@ -1,9 +1,9 @@
 # Vision Player Pro Privacy Policy — Meta Quest
 
-**App:** Vision Player Pro: VR Video Player, on the Meta Horizon Store
-**Publisher:** Meshy (Ahmed Dalhi)
-**Effective date:** July 25, 2026
-**Last updated:** September 30, 2026
+- **App:** Vision Player Pro: VR Video Player, on the Meta Horizon Store
+- **Publisher:** Meshy (Ahmed Dalhi)
+- **Effective date:** July 25, 2026
+- **Last updated:** September 30, 2026
 
 ---
 
@@ -97,7 +97,7 @@ We collect nothing beyond what sections 2 and 3 describe. In particular, Vision 
 
 ## 5. Where Your Data Is Stored and Who Can Access It
 
-- **Your Meta user ID, profile and achievement progress** are stored by **Meta** on Meta's servers, as part of your Meta account, under [Meta&#39;s Privacy Policy](https://www.meta.com/legal/privacy-policy/).
+- **Your Meta user ID, profile and achievement progress** are stored by **Meta** on Meta's servers, as part of your Meta account, under [Meta's Privacy Policy](https://www.meta.com/legal/privacy-policy/).
 - Vision Player Pro has **no servers, no database and no user accounts** of its own. We (the developer) do not receive your user ID, profile or achievement progress, except for an account number you choose to email us. We access your achievement progress only to delete it at your request, using the tools Meta provides to developers.
 - We do not use any data processors, service providers or partners that can access this data.
 
@@ -105,12 +105,12 @@ We collect nothing beyond what sections 2 and 3 describe. In particular, Vision 
 
 ## 6. How Long We Keep Data
 
-| Data                                    | How long it is kept                                                                             |
-| --------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| Meta user ID, username, profile picture | Not saved by the app.                                                                           |
-| Achievement progress                    | On your Meta account until you ask us to delete it (section 7) or you delete your Meta account. |
-| Data on your headset (section 3)        | Until you clear the app's data or uninstall the app.                                            |
-| Emails you send us                      | While we handle your request (section 2.5).                                                     |
+| Data | How long it is kept |
+|---|---|
+| Meta user ID, username, profile picture | Not saved by the app. |
+| Achievement progress | On your Meta account until you ask us to delete it (section 7) or you delete your Meta account. |
+| Data on your headset (section 3) | Until you clear the app's data or uninstall the app. |
+| Emails you send us | While we handle your request (section 2.5). |
 
 ---
 
@@ -137,7 +137,7 @@ After deletion, your Vision Player Pro achievements disappear from your Meta pro
 
 We will not refuse a deletion request. No law requires us to keep any of this data.
 
-You can also manage or delete the data that Meta holds about your Meta account using Meta's own tools, described in [Meta&#39;s Privacy Policy](https://www.meta.com/legal/privacy-policy/).
+You can also manage or delete the data that Meta holds about your Meta account using Meta's own tools, described in [Meta's Privacy Policy](https://www.meta.com/legal/privacy-policy/).
 
 ---
 
