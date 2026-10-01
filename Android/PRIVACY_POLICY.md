@@ -3,7 +3,7 @@
 - **App:** Vision Player Pro: VR Video Player, on the Meta Horizon Store
 - **Publisher:** Meshy (Ahmed Dalhi)
 - **Effective date:** July 25, 2026
-- **Last updated:** September 30, 2026
+- **Last updated:** October 1, 2026
 
 ---
 
@@ -79,6 +79,7 @@ To remember your library and preferences, the app saves the following on your he
 - Network server bookmarks
 - **Network server passwords**, encrypted with Android `EncryptedSharedPreferences`, which uses hardware-backed Android Keystore protection
 - The date of the last day counted toward your achievement progress (section 2.3)
+- Thumbnails of your videos, and a fingerprint of each video file the app has shown, with the file's location. The fingerprint is calculated from the file's size and its first and last 64 KB. It lets the app recognise a video you have moved or renamed, so the video keeps its thumbnail, resume position, favorite and history. If a video disappears from its folder, these are kept for up to 180 days in case it comes back, for example when you reconnect a drive.
 
 ---
 
