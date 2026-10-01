@@ -28,7 +28,7 @@
 
   <main class="container">
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: July 6, 2026 · Last updated: July 6, 2026</p>
+    <p class="meta">Effective date: July 6, 2026 · Last updated: October 1, 2026</p>
 
     <div class="callout">
       <strong class="callout-title">The short version</strong>
@@ -82,9 +82,9 @@
 
     <h2 id="on-device">3. Information stored on your device</h2>
     <p>
-      VisionPlayer stores app state locally on your device using Apple's standard on‑device storage
-      (<code>UserDefaults</code>). This information never leaves your device except through the
-      optional iCloud sync described below. It includes:
+      VisionPlayer stores app state locally on your device using Apple's standard on‑device storage.
+      This information never leaves your device except through the optional iCloud sync described
+      below. It includes:
     </p>
     <ul>
       <li>Your app preferences and settings</li>
@@ -92,22 +92,35 @@
       <li>Resume‑playback positions per video</li>
       <li>Per‑video configuration overrides (projection, frame packing, playback speed, subtitle style)</li>
       <li>Security‑scoped bookmarks that let the app reopen files and folders you have explicitly granted access to</li>
-      <li>Cached video thumbnails and, if you use the metadata lookup feature, cached poster images</li>
+      <li>Network servers you save, with their passwords stored in the system Keychain on your device</li>
+      <li>Cached video thumbnails</li>
+      <li>
+        A fingerprint of each video file the app has shown, with the file's location. The fingerprint is
+        calculated from the file's size and its first and last 64 KB. It lets the app recognise a video
+        you have moved or renamed, so the video keeps its thumbnail, favorite, resume position and history.
+        If a video disappears from its folder, these are kept for up to 180 days in case it comes back, for
+        example when you reconnect a drive.
+      </li>
     </ul>
+    <p>
+      Cached thumbnails and video fingerprints are not synced to iCloud and are not included in your
+      device backups.
+    </p>
     <p>
       You can clear this information at any time by deleting the app from your device.
     </p>
 
     <h2 id="icloud">4. Optional iCloud sync</h2>
     <p>
-      If you are signed in to iCloud on your Apple device, VisionPlayer uses Apple's iCloud
-      Key‑Value Storage (<code>NSUbiquitousKeyValueStore</code>) to sync a small amount of app state
+      If you are signed in to iCloud on your Apple device, VisionPlayer uses Apple's
+      <strong>CloudKit private database</strong> (via SwiftData) to sync a small amount of app state
       across your own Apple devices, so that (for example) you can start a video on one device and
       resume on another. The synced items are:
     </p>
     <ul>
       <li>Favorites list</li>
-      <li>Playback history (capped at the 50 most recent items)</li>
+      <li>Playback history (capped at the 25 most recent items)</li>
+      <li>Play counts per video</li>
       <li>Resume positions per video</li>
       <li>Per‑video configuration overrides</li>
     </ul>
@@ -128,20 +141,16 @@
         route or observe this traffic.
       </li>
       <li>
-        <strong>Discovering VisionPlayer Link servers on your local network.</strong> If you use the
-        Link feature, the app uses Bonjour (mDNS) to discover VisionPlayer Link servers on your local
-        network. This traffic never leaves your local network.
+        <strong>Streaming from a computer or NAS on your local network (SMB).</strong> The app
+        connects directly to a PC, Mac or NAS that you choose and streams videos from it. It also
+        listens for file shares that computers and NAS devices announce on your local network
+        (Bonjour/mDNS), so they appear without typing an address. This traffic stays inside your
+        local network.
       </li>
       <li>
-        <strong>Optional metadata lookup.</strong> If you use the movie‑metadata lookup feature to
-        identify a video from its title, the app queries
-        <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">The Movie Database (TMDB)</a>
-        with the title you provide. The request sent to TMDB contains only the search text or an ID;
-        it does not include any information that identifies you. TMDB's use of the request is
-        governed by their
-        <a href="https://www.themoviedb.org/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
-        and
-        <a href="https://www.themoviedb.org/terms-of-use" target="_blank" rel="noopener">Terms of Use</a>.
+        <strong>DLNA media servers.</strong> When you search for media servers, the app sends a
+        discovery request to your local network (SSDP multicast), then streams directly from the
+        server you choose. This traffic stays inside your local network.
       </li>
     </ul>
 
@@ -153,8 +162,8 @@
     </p>
     <ul>
       <li>
-        <strong>Local network.</strong> Required to discover VisionPlayer Link servers on your Wi‑Fi
-        network via Bonjour.
+        <strong>Local network.</strong> Required to find and stream from file shares (SMB) and
+        DLNA media servers on your Wi‑Fi network. It does not give the app your location.
       </li>
       <li>
         <strong>Photos (add only).</strong> Required to save video screenshots to your Photos
@@ -175,10 +184,8 @@
     <h2 id="third-parties">7. Third‑party services</h2>
     <p>
       VisionPlayer does not integrate any third‑party analytics, advertising, crash‑reporting, or
-      tracking SDK. The only external service the app may contact is TMDB, and only when you use the
-      optional metadata lookup feature (see <a href="#network">§5</a>). If you play a video from a
-      third‑party URL that you provide (for example, an HLS stream), that server is a third party
-      whose privacy practices are outside our control.
+      tracking SDK. If you play a video from a third‑party URL that you provide (for example, an HLS
+      stream), that server is a third party whose privacy practices are outside our control.
     </p>
 
     <h2 id="children">8. Children</h2>
@@ -210,7 +217,7 @@
     <p>Questions or concerns about this Privacy Policy? Please reach out:</p>
     <ul>
       <li>Email: <a href="mailto:davinci.dalhi@gmail.com?subject=VisionPlayer%20Privacy">davinci.dalhi@gmail.com</a></li>
-      <li>Issue tracker: <a href="https://github.com/Meshy-SC/VisionPlayer/issues" target="_blank" rel="noopener">https://meshy-sc.github.io/VisionPlayer/privacy.html#network</a></li>
+      <li>Issue tracker: <a href="https://github.com/Meshy-SC/VisionPlayer/issues" target="_blank" rel="noopener">github.com/Meshy-SC/VisionPlayer/issues</a></li>
     </ul>
   </main>
 
