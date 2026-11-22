@@ -3,19 +3,20 @@
 - **App:** Vision Player Pro: VR Video Player, on the Meta Horizon Store
 - **Publisher:** Meshy (Ahmed Dalhi)
 - **Effective date:** July 25, 2026
-- **Last updated:** November 17, 2026
+- **Last updated:** November 22, 2026
 
 ---
 
 ## Summary
 
-Vision Player Pro uses Meta Horizon platform features for achievements and the Meta Horizon Store free trial. To do this, **Vision Player Pro collects and processes the following user data**:
+Vision Player Pro is free to download. It offers **Premium**, a one-time in-app purchase, and it uses Meta Horizon platform features for in-app purchases and achievements. To do this, **Vision Player Pro collects and processes the following user data**:
 
 - your **Meta user ID** for this app (Meta's "User ID" feature)
 - your **Meta profile**, meaning your username and profile picture, on which Meta shows your achievements (Meta's "User Profile" feature)
-- your **achievement progress**: the number of days on which you have watched videos
+- your **achievement progress**: the number of days on which you watched videos in earlier, paid versions of the app, and whether you owned the app before it became free
+- your **in-app purchase data**: whether your Meta account has bought Vision Player Pro Premium (Meta's "In-App Purchases" feature)
 
-Vision Player Pro uses this data for two things: to record your achievements on your Meta account, and to end the Meta Horizon Store free trial after 7 days of watching. It also checks with Meta that you own the app. Your videos, history, settings and server passwords are stored on your headset.
+Vision Player Pro uses this data to unlock Premium for people who bought it, or who bought the app before it became free, and to record your achievements on your Meta account. It also checks with Meta that your account has the app. Your videos, history, settings, server passwords and the free version's daily watching time are stored on your headset.
 
 Any user can ask us to delete their data at any time, free of charge. Section 7 explains how.
 
@@ -38,7 +39,7 @@ This policy covers Vision Player Pro on Meta Quest headsets running Meta Horizon
 - **What it is:** the number Meta uses to identify your Meta account inside Vision Player Pro. It is not your username. Meta gives each app a different number for the same person, so this one cannot identify you in other apps.
 - **How it is processed:** Meta Horizon OS provides it to the app through the Meta Horizon Platform SDK when the app starts. Vision Player Pro processes it with every achievement update it sends to Meta (section 2.3), and Meta records your achievement progress under this ID, which is how Meta knows the progress belongs to you.
 - **What it is used for:**
-  - your achievements and the free trial (section 2.3)
+  - your achievements (section 2.3) and your purchases (section 2.4)
   - showing it to you as your **account number** in **Settings > Privacy**, so you can include it in a deletion request (section 7)
 
   It is not used for advertising, profiling or anything else. The app keeps it in memory while it runs; Meta stores it as part of your Meta account.
@@ -52,19 +53,25 @@ This policy covers Vision Player Pro on Meta Quest headsets running Meta Horizon
 ### 2.3 Your achievement progress
 
 - **What it is:**
-  - a **"days watched" count**: the number of different days on which you played at least one video in the app
-  - whether you have unlocked the **"Regular Viewer"** achievement, which unlocks after 7 days of watching
-- **How it is collected:** the first time you start a video on a given day, the app adds 1 to the count. On the 7th day it unlocks "Regular Viewer". The app saves only the date of the last day it counted, on your headset, so it does not count the same day twice.
+  - a **"days watched" count**: the number of different days on which you played at least one video in an earlier, paid version of the app (versions up to 26.1.17), and the **"Regular Viewer"** achievement those versions unlocked after 7 days of watching. The current version no longer adds to this count.
+  - the **"Original Owner"** achievement, a hidden achievement that marks a Meta account that owned Vision Player Pro before it became free.
+- **How it is collected:** earlier, paid versions added 1 to the count the first time you started a video on a given day. The current version reads the count and "Original Owner" when it starts. If your account has watched on a paid version, or the app on your headset was installed from a paid version, the app unlocks "Original Owner".
 - **How it is used:**
-  - to show your achievements on your Meta Horizon profile
-  - to end the Meta Horizon Store free trial. If you are trying the app before buying it, the trial ends when "Regular Viewer" unlocks, and Meta then offers you the purchase.
-- **What it contains:** only the count and the unlock described above: one step per day, with no video names, viewing times or durations.
+  - to unlock Premium, free of charge, for everyone who bought Vision Player Pro before it became free. Your achievements are how the app recognises you as an earlier buyer, on any headset and after a reinstall.
+  - to show your achievements on your Meta Horizon profile.
+- **What it contains:** only the count and the two unlocks described above, with no video names, viewing times or durations.
 
-### 2.4 Ownership check (entitlement)
+### 2.4 Your in-app purchase data (Meta "In-App Purchases" feature)
 
-When the app starts, it asks Meta Horizon OS whether your Meta account owns Vision Player Pro. It gets back a yes or no answer and uses it only to stop unlicensed copies of the app from running.
+- **What it is:** the record Meta keeps of the add-ons your Meta account has bought in Vision Player Pro. There is one: **Vision Player Pro Premium**, a one-time purchase. The record says which add-on it is and when it was bought.
+- **How it is processed:** when the app starts, and when you choose **Restore Purchase** in **Settings > Premium**, the app asks Meta Horizon OS which add-ons your account owns and reads the store price of Premium to show it. When you choose **Unlock Premium**, Meta Horizon OS shows Meta's own purchase screen; Meta handles the payment and tells the app whether the purchase went through. Your payment details (card or PayPal) are handled and kept by Meta.
+- **What it is used for:** only to unlock Premium on your headset and to show its price. It is not used for advertising, profiling or anything else.
 
-### 2.5 Emails you send us
+### 2.5 Ownership check (entitlement)
+
+When the app starts, it asks Meta Horizon OS whether your Meta account has Vision Player Pro from the Meta Horizon Store. It gets back a yes or no answer and uses it only to stop unlicensed copies of the app from running.
+
+### 2.6 Emails you send us
 
 If you email us for support or to request deletion, we receive your email address, your message, and anything you include, such as your account number. We use it only to answer you, or to find and delete your data. Your email passes through our email provider. We keep it only while we handle your request. For deletion requests, we delete your email once we have confirmed the deletion to you.
 
@@ -79,7 +86,9 @@ To remember your library and preferences, the app stores the following in its pr
 - Per-video format settings (projection, 3D mode, audio track selection)
 - Network server bookmarks
 - **Network server passwords**, encrypted with Android `EncryptedSharedPreferences`, which uses hardware-backed Android Keystore protection
-- The date of the last day counted toward your achievement progress (section 2.3)
+- The date of the last day earlier versions counted toward your achievement progress (section 2.3)
+- **Free version only:** how long you have watched videos today and the date, so the free version can offer its 10 minutes a day. Only time a video is actually playing is counted. Nothing about what you watched is stored.
+- Whether Premium is unlocked, so the app can start without waiting for Meta, and whether the app on your headset was first installed from an earlier, paid version (section 2.3)
 - Thumbnails of your videos, and a fingerprint of each video file the app has shown, with the file's location. The fingerprint is calculated from the file's size and its first and last 64 KB. It lets the app recognise a video you have moved or renamed, so the video keeps its thumbnail, resume position, favorite and history. If a video disappears from its folder, these are kept for up to 180 days in case it comes back, for example when you reconnect a drive.
 
 ---
@@ -92,9 +101,9 @@ If the app crashes, Meta Horizon OS may report it to Meta, and Meta's developer 
 
 ## 5. Where Your Data Is Stored and Who Can Access It
 
-- **Your Meta user ID, profile and achievement progress** are stored by **Meta** on Meta's servers, as part of your Meta account, under [Meta's Privacy Policy](https://www.meta.com/legal/privacy-policy/).
+- **Your Meta user ID, profile, achievement progress and purchase records** are stored by **Meta** on Meta's servers, as part of your Meta account, under [Meta's Privacy Policy](https://www.meta.com/legal/privacy-policy/).
 - **Your library data** (section 3) is stored on your headset.
-- Vision Player Pro has no servers of its own. The developer can see the account number you include in an email to us, and can access your achievement progress through the tools Meta provides to developers; we use that access only to delete your progress at your request. Meta's developer dashboard also shows us the crash details described in section 4.
+- Vision Player Pro has no servers of its own. The developer can see the account number you include in an email to us, and can access your achievement progress through the tools Meta provides to developers; we use that access only to delete your progress at your request. Meta's developer dashboard also shows us the crash details described in section 4, and sales reports for Premium, which Meta provides as totals.
 - No data processors, service providers or partners other than Meta have access to this data.
 
 ---
@@ -105,8 +114,9 @@ If the app crashes, Meta Horizon OS may report it to Meta, and Meta's developer 
 |---|---|
 | Meta user ID, username, profile picture | Processed while the app runs and for each achievement update; kept by Meta as part of your Meta account. |
 | Achievement progress | On your Meta account until you ask us to delete it (section 7) or you delete your Meta account. |
+| Purchase records | Kept by Meta as part of your Meta account's purchase history, under Meta's Privacy Policy. |
 | Data on your headset (section 3) | Until you clear the app's data or uninstall the app. |
-| Emails you send us | While we handle your request (section 2.5). |
+| Emails you send us | While we handle your request (section 2.6). |
 
 ---
 
@@ -129,7 +139,9 @@ You can delete this yourself, immediately:
 
 If the app is no longer installed, you can reinstall it from your Meta Horizon library to find the number. If you cannot do that, email us anyway and we will work with you to find and delete your data.
 
-After deletion, your Vision Player Pro achievements disappear from your Meta profile. If you keep using the app, the days-watched count starts again from zero.
+After deletion, your Vision Player Pro achievements disappear from your Meta profile. If you bought the app before it became free, the "Original Owner" achievement is how the app recognises you on a new headset or after a reinstall, so deleting it can remove Premium in those cases; a Premium purchase you made in the app is not affected, because Meta keeps it as part of your purchase history.
+
+Your purchase records belong to your Meta account's purchase history, which Meta keeps; you can see and manage them with Meta's own tools.
 
 We will not refuse a deletion request. No law requires us to keep any of this data.
 
@@ -152,7 +164,7 @@ You can also complain to a data protection authority. In France, that is the CNI
 
 **Legal basis (for users in the EEA and the UK):**
 
-- We use your Meta user ID and achievement progress to provide app features you chose to use: achievements and the store free trial. This is necessary to perform our contract with you.
+- We use your Meta user ID, achievement progress and purchase data to provide what you bought and the features you chose to use: Premium, achievements, and Premium for earlier buyers. This is necessary to perform our contract with you.
 - The ownership check protects the app from unlicensed copies. This is our legitimate interest.
 - We use your emails because you asked us something. This is also our legitimate interest.
 
@@ -166,7 +178,7 @@ The app connects to the network only for the following:
 - **DLNA media servers:** sends a discovery request to your local network (SSDP multicast) to find DLNA/UPnP media servers, then streams directly from the one you choose. This traffic stays inside your local network.
 - **Automatic share discovery:** listens for file shares that computers and NAS devices announce on your local network (mDNS), so they appear without typing an address.
 - **HTTP/HLS streaming:** connects directly to video stream addresses that you enter.
-- **Meta platform services:** communicates with Meta, through Meta Horizon OS, for the ownership check and achievements (section 2).
+- **Meta platform services:** communicates with Meta, through Meta Horizon OS, for the ownership check, in-app purchases and achievements (section 2).
 
 ---
 
@@ -183,7 +195,7 @@ The app connects to the network only for the following:
 
 ## 11. Third Parties, Advertising and Sharing
 
-Vision Player Pro contains **no advertising, analytics or tracking code**. Your data is never sold, rented or shared for advertising. The only other party involved is Meta, which runs Meta Horizon OS, the Meta Horizon Store and the platform features described in section 2.
+Vision Player Pro contains **no advertising, analytics or tracking code**. Your data is never sold, rented or shared for advertising. The only other party involved is Meta, which runs Meta Horizon OS, the Meta Horizon Store, the purchase screen and payments, and the platform features described in section 2.
 
 ---
 
@@ -195,7 +207,7 @@ Vision Player Pro is a general-audience video player. It processes the same limi
 
 ## 13. Security
 
-The data on your headset is kept in the app's private storage, which other apps cannot read. Network server passwords on your headset are encrypted with hardware-backed Android Keystore protection. Your user ID, profile and achievement progress are processed through Meta's own platform SDK and stored by Meta.
+The data on your headset is kept in the app's private storage, which other apps cannot read. Network server passwords on your headset are encrypted with hardware-backed Android Keystore protection. Your user ID, profile, achievement progress and purchase records are processed through Meta's own platform SDK and stored by Meta.
 
 ---
 
